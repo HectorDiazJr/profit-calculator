@@ -12,21 +12,31 @@
     <script type="text/javascript">
 
         var paid = prompt("How much did you pay for this?");
-        var paidInt = parseInt(paid);
+        var paidInt = Number(paid);
+        console.log("you paid $" + paidInt);
 
         var salePrice = prompt("How much do you plan on selling this for?");
-        var salePriceInt = parseInt(salePrice);
+        var salePriceInt = Number(salePrice);
+        console.log("You want to sell it for $" + salePriceInt);
 
-        var shippingFee = prompt("How much will it cost to ship?");
-        var shippingFeeInt = parseInt(shippingFee);
+        var shippingCharge = prompt("How much will you charge to ship?");
+        var shippingChargeInt = Number(shippingCharge);
+        console.log("You will charge $" + shippingChargeInt + " to ship");
 
-        var totalCost = salePriceInt + shippingFeeInt;
-        var ebayFee = totalCost * 0.12 + 0.3;
+        var shippingCost = prompt("How much will it cost you to ship?")
+        var shippingCostInt = Number(shippingCost);
+        console.log("Your cost to ship is $" + shippingCostInt);
 
-        var totalCostwithFee = paidInt + shippingFeeInt + ebayFee;
-        var profit = totalCostwithFee - paidInt;
+        var totalCost = salePriceInt + shippingChargeInt;
+        var ebayFee = (totalCost * 0.12) + 0.30;
+        console.log("ebay fee is $" + ebayFee);
+
+        var totalCostwithFee = paidInt + shippingCostInt + ebayFee;
+        console.log("Your total cost will be $" + totalCostwithFee);
+        var profit = (salePriceInt + shippingChargeInt) - totalCostwithFee;
 
         alert("Your profit is $" + profit);
+        console.log("Your profit is $" + profit);
         alert("Your ebay fees are $" + ebayFee);
 
     </script>
