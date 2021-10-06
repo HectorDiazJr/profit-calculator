@@ -28,16 +28,18 @@
         console.log("Your cost to ship is $" + shippingCostInt);
 
         var totalCost = salePriceInt + shippingChargeInt;
-        var ebayFee = (totalCost * 0.12) + 0.30;
-        console.log("ebay fee is $" + ebayFee);
+        var ebayFee = (totalCost * 0.12) + 0.30;        
 
         var totalCostwithFee = paidInt + shippingCostInt + ebayFee;
         console.log("Your total cost will be $" + totalCostwithFee);
         var profit = (salePriceInt + shippingChargeInt) - totalCostwithFee;
 
-        alert("Your profit is $" + profit);
         console.log("Your profit is $" + profit);
-        alert("Your ebay fees are $" + ebayFee + " and your shipping fees are $" + shippingCost);
+        console.log("ebay fee is $" + ebayFee);
+
+        alert("Your profit is $" + profit.toFixed(2));
+        
+        alert("Your ebay fees are $" + ebayFee.toFixed(2) + " and your shipping fees are $" + shippingCost);
 
     </script>
 </body>
