@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 115px;
+};
+
+.red {
+    color:red;
+}
+
+.green {
+    color:green;
+}
+
+.startButton {
+    text-align: center;
+    margin-top:25px;
+}
+
+.buttoncolmn {
+    text-align: center;
+    
+}
+
+.btn {
+    margin-bottom: 25px;
+}

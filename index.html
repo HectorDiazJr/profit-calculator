@@ -5,43 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profit Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <script type="text/javascript">
+    <div class="container-fluid">
 
-        var paid = prompt("How much did you pay for this?");
-        var paidInt = Number(paid);
-        console.log("you paid $" + paidInt);
+        <div class="startButton">
 
-        var salePrice = prompt("How much do you plan on selling this for?");
-        var salePriceInt = Number(salePrice);
-        console.log("You want to sell it for $" + salePriceInt);
+            <button class="btn btn-primary" id="start" type="submit">Start</button>
 
-        var shippingCharge = prompt("How much will you charge to ship?");
-        var shippingChargeInt = Number(shippingCharge);
-        console.log("You will charge $" + shippingChargeInt + " to ship");
+        </div>
 
-        var shippingCost = prompt("How much will it cost you to ship?")
-        var shippingCostInt = Number(shippingCost);
-        console.log("Your cost to ship is $" + shippingCostInt);
+        <h1 id="total">Your Profit</h1>
 
-        var totalCost = salePriceInt + shippingChargeInt;
-        var ebayFee = (totalCost * 0.12) + 0.30;        
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 buttoncolmn">
+                <button class="btn btn-primary" id="onePercent" type="submit">1% Promotion</button>
+                <button class="btn btn-primary" id="twoPercent" t ype="submit">2% Promotion</button>
+                <button class="btn btn-primary" id="threePercent" type="submit">3% Promotion</button>
+                <button class="btn btn-primary" id="fourPercent" type="submit">4% Promotion</button>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 buttoncolmn">
+                <button class="btn btn-primary" id="fivePercent" type="submit">5% Promotion</button>
+                <button class="btn btn-primary" id="sixPercent" t ype="submit">6% Promotion</button>
+                <button class="btn btn-primary" id="sevenPercent" type="submit">7% Promotion</button>
+                <button class="btn btn-primary" id="eightPercent" type="submit">8% Promotion</button>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 buttoncolmn">
+                <button class="btn btn-primary" id="ninePercent" type="submit">9% Promotion</button>
+                <button class="btn btn-primary" id="tenPercent" t ype="submit">10% Promotion</button>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 buttoncolmn">
+                <button class="btn btn-primary" id="noProm" type="submit">No Promotion</button>
+            </div>
+        </div>
 
-        var totalCostwithFee = paidInt + shippingCostInt + ebayFee;
-        console.log("Your total cost will be $" + totalCostwithFee);
-        var profit = (salePriceInt + shippingChargeInt) - totalCostwithFee;
+    </div>
 
-        console.log("Your profit is $" + profit);
-        console.log("ebay fee is $" + ebayFee);
-
-        alert("Your profit is $" + profit.toFixed(2));
-        
-        alert("Your ebay fees are $" + ebayFee.toFixed(2) + " and your shipping fees are $" + shippingCost);
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="profit.js"></script>
 </body>
 
 </html>
